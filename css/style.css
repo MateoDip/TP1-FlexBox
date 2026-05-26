@@ -1,0 +1,308 @@
+/* ==========================================================================
+   RESET & ESTILOS GENERALES (Normalización básica)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ==========================================================================
+   ESTILOS MOBILE FIRST (Por defecto para pantallas chicas)
+   ========================================================================== */
+
+/* Cabecera */
+.main-header {
+    background-color: #fff;
+    border-bottom: 3px solid #b10000;
+    padding: 15px;
+}
+
+.header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.date, .location {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.logo {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #111;
+    margin: 5px 0;
+}
+
+/* Menú de Navegación Mobile */
+.navbar {
+    background-color: #111;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end; /* Alinea la hamburguesa a la derecha */
+}
+
+.menu-toggle {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block; /* Visible en Mobile */
+}
+
+.nav-links {
+    display: none; /* Se oculta la barra en Mobile según la consigna */
+}
+
+/* Publicidades */
+.ad-banner {
+    background-color: #e0e0e0;
+    color: #666;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px dashed #999;
+    margin: 10px auto;
+    width: 95%;
+}
+
+.ad-box {
+    background-color: #e0e0e0;
+    color: #666;
+    text-align: center;
+    padding: 50px 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px dashed #999;
+    margin-bottom: 20px;
+}
+
+/* Contenedor estructural */
+.container {
+    display: flex;
+    flex-direction: column; /* Flujo vertical en dispositivos chicos */
+    gap: 20px;
+    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Bloque de Noticias */
+.news-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Noticia Principal */
+.main-story {
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+}
+
+.story-content {
+    padding: 15px 0;
+}
+
+.category {
+    color: #b10000;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.main-story h2 {
+    font-size: 1.5rem;
+    margin: 5px 0 10px 0;
+}
+
+.main-story h2 a:hover {
+    color: #b10000;
+}
+
+/* Noticias Secundarias */
+.secondary-stories {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.secondary-story {
+    background-color: #fff;
+    padding: 15px;
+    border-left: 4px solid #333;
+}
+
+.secondary-story h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.secondary-story h3 a:hover {
+    color: #b10000;
+}
+
+/* Componente de Formulario (Heredado y adaptado) */
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.form-container h3 {
+    margin-bottom: 10px;
+}
+
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subscription-form label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.subscription-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-submit {
+    background-color: #b10000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #800000;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    margin-top: 30px;
+}
+
+.main-footer p {
+    margin: 5px 0;
+}
+
+/* ==========================================================================
+   MEDIA QUERY: TABLETS (Ancho mínimo: 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
+    .header-top {
+        flex-direction: row;
+        justify-content: space-between; /* Distribuye fecha, logo y ubicación */
+    }
+
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    /* Las noticias secundarias se organizan lado a lado (2 columnas) */
+    .secondary-stories {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .secondary-story {
+        flex: 1 1 calc(50% - 15px); /* Ocupan la mitad del espacio disponible */
+    }
+}
+
+/* ==========================================================================
+   MEDIA QUERY: DESKTOP (Ancho mínimo: 1024px)
+   ========================================================================== */
+@media (min-width: 1024px) {
+    
+    /* Comportamiento del Menú según la consigna */
+    .menu-toggle {
+        display: none; /* Desaparece el icono hamburguesa */
+    }
+
+    .navbar {
+        justify-content: center; /* Centra la barra de navegación */
+        padding: 0;
+    }
+
+    .nav-links {
+        display: flex; /* Se muestra la lista de enlaces */
+        list-style: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links li a {
+        display: block;
+        color: #fff;
+        padding: 12px 20px;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+
+    .nav-links li a:hover {
+        background-color: #b10000;
+    }
+
+    /* Maquetación de la pantalla general en dos columnas (Layout principal) */
+    .container {
+        flex-direction: row; /* Coloca la grilla de noticias al lado del Sidebar */
+        align-items: flex-start;
+    }
+
+    .news-grid {
+        flex: 3; /* Toma el 75% del ancho */
+    }
+
+    .sidebar {
+        flex: 1; /* Toma el 25% del ancho */
+        position: sticky;
+        top: 10px; /* El bloque lateral acompaña el scroll */
+    }
+
+    /* Ajuste fino de noticias secundarias en Desktop (pasan a 3 columnas) */
+    .secondary-story {
+        flex: 1 1 calc(33.333% - 15px);
+    }
+}
