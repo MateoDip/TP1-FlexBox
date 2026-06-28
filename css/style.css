@@ -62,18 +62,18 @@ img {
     background-color: #111;
     padding: 10px;
     display: flex;
-    justify-content: flex-end; /* Alinea la hamburguesa a la derecha */
+    justify-content: flex-end; 
 }
 
 .menu-toggle {
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
-    display: block; /* Visible en Mobile */
+    display: block; 
 }
 
 .nav-links {
-    display: none; /* Se oculta la barra en Mobile según la consigna */
+    display: none; 
 }
 
 /* Publicidades */
@@ -103,7 +103,7 @@ img {
 /* Contenedor estructural */
 .container {
     display: flex;
-    flex-direction: column; /* Flujo vertical en dispositivos chicos */
+    flex-direction: column; 
     gap: 20px;
     padding: 15px;
     max-width: 1200px;
@@ -171,7 +171,7 @@ img {
     color: #b10000;
 }
 
-/* Componente de Formulario (Heredado y adaptado) */
+/* Componente de Formulario Lateral */
 .form-container {
     background-color: #fff;
     padding: 20px;
@@ -233,21 +233,20 @@ img {
 @media (min-width: 768px) {
     .header-top {
         flex-direction: row;
-        justify-content: space-between; /* Distribuye fecha, logo y ubicación */
+        justify-content: space-between; 
     }
 
     .logo {
         font-size: 2.5rem;
     }
 
-    /* Las noticias secundarias se organizan lado a lado (2 columnas) */
     .secondary-stories {
         flex-direction: row;
         flex-wrap: wrap;
     }
 
     .secondary-story {
-        flex: 1 1 calc(50% - 15px); /* Ocupan la mitad del espacio disponible */
+        flex: 1 1 calc(50% - 15px); 
     }
 }
 
@@ -256,18 +255,17 @@ img {
    ========================================================================== */
 @media (min-width: 1024px) {
     
-    /* Comportamiento del Menú según la consigna */
     .menu-toggle {
-        display: none; /* Desaparece el icono hamburguesa */
+        display: none; 
     }
 
     .navbar {
-        justify-content: center; /* Centra la barra de navegación */
+        justify-content: center; 
         padding: 0;
     }
 
     .nav-links {
-        display: flex; /* Se muestra la lista de enlaces */
+        display: flex; 
         list-style: none;
         width: 100%;
         justify-content: center;
@@ -285,23 +283,21 @@ img {
         background-color: #b10000;
     }
 
-    /* Maquetación de la pantalla general en dos columnas (Layout principal) */
     .container {
-        flex-direction: row; /* Coloca la grilla de noticias al lado del Sidebar */
+        flex-direction: row; 
         align-items: flex-start;
     }
 
     .news-grid {
-        flex: 3; /* Toma el 75% del ancho */
+        flex: 3; 
     }
 
     .sidebar {
-        flex: 1; /* Toma el 25% del ancho */
+        flex: 1; 
         position: sticky;
-        top: 10px; /* El bloque lateral acompaña el scroll */
+        top: 10px; 
     }
 
-    /* Ajuste fino de noticias secundarias en Desktop (pasan a 3 columnas) */
     .secondary-story {
         flex: 1 1 calc(33.333% - 15px);
     }
